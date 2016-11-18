@@ -1,3 +1,6 @@
+before_build:
+  - ps: dotnet restore
+
 pull_requests:
   do_not_increment_build_number: true
 
@@ -8,7 +11,7 @@ build:
 
 branches:
   only:
-  - master
+  - appveyorTest
 
 artifacts:
   - path: Package\**\*.nupkg
@@ -16,11 +19,18 @@ artifacts:
 deploy:
   - provider: NuGet
     artifact: /.*\.nupkg/
-    server:
+    server: https://www.myget.org/F/easynetq-test1/api/v2/package
     api_key:
-      secure: ejD7WLs3aqlXgHLyWq444QK6pnMT6g/QiRxptqIGaOgKvGM7SJ17r/QH6e1jEJ9M
+      secure: test
     on:
       branch: master
+  - provider: NuGet
+    artifact: /.*\.nupkg/
+    server: https://www.myget.org/F/easynetq-test1/api/v2/package
+    api_key:
+       secure: NulQ1qClvThpFTs6XZfer2DG8Qe2TjK0bt1zhAuvRXe9opfwJIbAEMr1ceUl/N79
+    on:
+      branch: appveyorTest
 
 skip_commits:
   files:
