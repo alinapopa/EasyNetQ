@@ -25,10 +25,7 @@
     "netcoreapp1.0": {
       "imports": "portable-net45+win8",
       "dependencies": {
-        "Microsoft.NETCore.App": {
-          "version": "1.0.1",
-          "type": "platform"
-        },
+        "Microsoft.NETCore.App": "1.1.0",
         "System.Net.Http": "4.1.0"
       }
     },
