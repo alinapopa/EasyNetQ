@@ -1,5 +1,4 @@
 before_build:
-  - nuget restore
   - ps: dotnet restore
 
 pull_requests:
