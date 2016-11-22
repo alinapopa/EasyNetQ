@@ -33,7 +33,22 @@
         </ProjectToBuild>
     </ItemGroup>
 
-    <Target Name="Build" DependsOnTargets="Version">
+    <Target Name="ComputeProjectReference" DependsOnTargets="Version" Inputs="%(Project.Identity)" Outputs="%(Project.Identity)__force_output__">
+  <MSBuild Projects="@(Project)" Targets="ResolveProjectReferences">
+    <Output TaskParameter="TargetOutputs" ItemName="ResolvedProjectReferences" />
+  </MSBuild>
+
+  <ItemGroup>
+    <ProjectReferenceItemSpec Include="%(ResolvedProjectReferences.OriginalProjectReferenceItemSpec)" />
+  </ItemGroup>
+
+ <ItemGroup>
+    <ProjectReference Include="@(Project)">
+      <ProjectReference>@(ProjectReferenceItemSpec)</ProjectReference>
+    </ProjectReference> </ItemGroup>
+</Target>
+
+    <Target Name="Build" DependsOnTargets="ComputeProjectReference">
         <MSBuild Projects="@(ProjectToBuild)" Targets="Clean;Rebuild"/>
     </Target>
 
