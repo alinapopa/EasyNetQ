@@ -16,6 +16,13 @@
         <BuildNumber Condition=" '$(BuildNumber)' == '' ">0</BuildNumber>
     </PropertyGroup>
 
+    <!-- Properties that are set during build to find test/merge binaries -->
+    <PropertyGroup>
+        <Configuration>Release</Configuration>
+        <DesktopFrameworkVersion>net451</DesktopFrameworkVersion>
+        <BinaryDesktopFolder>bin\$(Configuration)\$(DesktopFrameworkVersion)</BinaryDesktopFolder>
+    </PropertyGroup>
+
     <Import Project="$(MSBuildCommunityTasksPath)\MSBuild.Community.Tasks.Targets"/>
 
   <!--  <Target Name="Default" DependsOnTargets="Version; Build; Test; Package; PackageDiWindsor; PackageDiNinject; PackageDiSimpleInjector; PackageDILightInject; PackageDiStructureMap; PackageDiAutofac; PackageSerilog" /> -->
