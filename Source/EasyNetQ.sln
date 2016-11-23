@@ -73,9 +73,9 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "EasyNetQ.Hosepipe.Tests", "
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "EasyNetQ.Scheduler", "EasyNetQ.Scheduler\EasyNetQ.Scheduler.xproj", "{03B93AAD-6CAB-4726-826E-B05684AEC1B9}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "EasyNetQ.Scheduler.Mongo", "EasyNetQ.Scheduler.Mongo\EasyNetQ.Scheduler.Mongo.xproj", "{AFD272B4-4A2B-43D4-81ED-666F8918FD01}"
-EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "EasyNetQ.Scheduler.Mongo.Core", "EasyNetQ.Scheduler.Mongo.Core\EasyNetQ.Scheduler.Mongo.Core.xproj", "{F444E58F-DA2A-47E8-8246-C4BDD9A192B2}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "EasyNetQ.Scheduler.Mongo", "EasyNetQ.Scheduler.Mongo\EasyNetQ.Scheduler.Mongo.xproj", "{AFD272B4-4A2B-43D4-81ED-666F8918FD01}"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "EasyNetQ.Scheduler.Mongo.Tests", "EasyNetQ.Scheduler.Mongo.Tests\EasyNetQ.Scheduler.Mongo.Tests.xproj", "{4E7F926F-D939-4962-A7EF-112DE41B4236}"
 EndProject
