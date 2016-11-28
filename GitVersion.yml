@@ -4,7 +4,7 @@ branches:
   master:
     mode: ContinuousDelivery
   appveyorTest:
-    mode: ContinuousDelivery
+    mode: ContinuousDeployment
   features?[/-]:
     mode: ContinuousDeployment
 ignore:
