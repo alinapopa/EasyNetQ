@@ -1,5 +1,5 @@
 before_build:
-  - ps: dotnet restore
+  - dotnet restore --verbosity Error
   - ps: Build\UpdateGitVersion.ps1
 pull_requests:
   do_not_increment_build_number: true
