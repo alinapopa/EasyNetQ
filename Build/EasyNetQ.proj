@@ -72,7 +72,7 @@
             XPath="/package/metadata/version"
             Value="%(AsmInfo.Version)" />        
         
-        <Exec WorkingDirectory="$(Package)\EasyNetQ" Command="$(NuGet)\NuGet.exe pack $(Package)\EasyNetQ\EasyNetQ.nuspec" />
+        <Exec WorkingDirectory="$(Package)\EasyNetQ" Command="dotnet pack $(Package)\EasyNetQ\EasyNetQ.nuspec" />
 
     </Target>
 <!--
