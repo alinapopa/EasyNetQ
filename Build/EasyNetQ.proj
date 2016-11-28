@@ -50,7 +50,7 @@
         </ItemGroup>
 
         <Exec WorkingDirectory="%(TestProjects.RootDir)\%(TestProjects.Directory)"
-              Command='dotnet test'
+              Command='dotnet test --no-build'
               ContinueOnError="ErrorAndContinue" /> 
     </Target>
 
