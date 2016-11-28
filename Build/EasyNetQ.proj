@@ -68,7 +68,7 @@
 
         <MakeDir Directories="$(NuGetPackageDirectory)" Condition="!Exists('$(NuGetPackageDirectory)')" />
         <Delete Files="@(FilesToDelete)" />
-        <Exec Command='dotnet pack %(ClientLibraries.FullPath) --output $(NuGetPackageDirectory)' />
+        <Exec Command='dotnet pack %(ClientLibraries.FullPath) --output $(NuGetPackageDirectory) --no-build' />
     </Target>
     
 <!--
