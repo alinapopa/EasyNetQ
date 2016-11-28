@@ -31,7 +31,7 @@ deploy:
     server: https://www.myget.org/F/easynetq-test1/api/v2/package
     api_key:
        secure: NulQ1qClvThpFTs6XZfer2DG8Qe2TjK0bt1zhAuvRXe9opfwJIbAEMr1ceUl/N79
-    skip_symbols:true
+    skip_symbols: true
     on:
       branch: appveyorTest
 
