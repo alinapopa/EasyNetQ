@@ -22,11 +22,12 @@ artifacts:
   - path: Package\**\*.nupkg
 
 deploy:
-  - provider: NuGet
+   - provider: NuGet
     artifact: /.*\.nupkg/
-    server: https://www.myget.org/F/easynetq-test1/api/v2/package
+    server:
     api_key:
-      secure: test
+      secure: ejD7WLs3aqlXgHLyWq444QK6pnMT6g/QiRxptqIGaOgKvGM7SJ17r/QH6e1jEJ9M
+    skip_symbols: true
     on:
       branch: master
   - provider: NuGet
@@ -36,7 +37,7 @@ deploy:
        secure: NulQ1qClvThpFTs6XZfer2DG8Qe2TjK0bt1zhAuvRXe9opfwJIbAEMr1ceUl/N79
     skip_symbols: true
     on:
-      branch: appveyorTest
+      branch: feature/netcore
 
 skip_commits:
   files:

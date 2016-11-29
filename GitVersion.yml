@@ -3,8 +3,6 @@ mode: ContinuousDelivery
 branches:
   master:
     mode: ContinuousDelivery
-  appveyorTest:
-    mode: ContinuousDeployment
   features?[/-]:
     mode: ContinuousDeployment
 ignore:
