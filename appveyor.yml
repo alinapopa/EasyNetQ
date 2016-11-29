@@ -22,7 +22,7 @@ artifacts:
   - path: Package\**\*.nupkg
 
 deploy:
-   - provider: NuGet
+  - provider: NuGet
     artifact: /.*\.nupkg/
     server:
     api_key:
