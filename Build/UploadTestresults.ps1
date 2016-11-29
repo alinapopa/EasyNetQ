@@ -16,11 +16,8 @@ $wc = New-Object 'System.Net.WebClient'
 foreach ($projectJson in $projects) {
 
     $directory = $projectJson.FullName
-        
-    pushd $directory
 
     $wc.UploadFile("https://ci.appveyor.com/api/testresults/nunit/$($env:APPVEYOR_JOB_ID)", (Join-Path $directory "\TestResult.xml"))
 
-    popd
 }
 
