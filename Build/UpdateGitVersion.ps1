@@ -20,7 +20,7 @@ foreach ($projectJson in $projects) {
         & dotnet restore
     }
     
-    & dotnet gitversion | Out-Null
+    & dotnet gitversion
 
     popd
 }
