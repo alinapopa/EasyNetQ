@@ -3,7 +3,9 @@ before_build:
   - ps: Build\UpdateGitVersion.ps1
 pull_requests:
   do_not_increment_build_number: true
-test: off  
+
+
+
 build:
   project: Build\EasyNetQ.proj
   verbosity: minimal
