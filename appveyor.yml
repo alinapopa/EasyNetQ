@@ -16,7 +16,7 @@ after_build:
 
 branches:
   only:
-  - appveyorTest
+  - feature/netcore
 
 artifacts:
   - path: Package\**\*.nupkg
