@@ -50,7 +50,7 @@
         </ItemGroup>
 
         <Exec WorkingDirectory="%(TestProjects.RootDir)\%(TestProjects.Directory)"
-              Command='dotnet test --no-build -c Release'
+              Command='dotnet test --no-build -c Release --result=myresults.xml;format=AppVeyor'
               ContinueOnError="ErrorAndContinue" /> 
     </Target>
 
