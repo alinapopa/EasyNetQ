@@ -11,6 +11,9 @@ build:
   verbosity: minimal
   publish_nuget: false
 
+after_build:
+  - ps: Build\UploadTestResults.ps1
+
 branches:
   only:
   - appveyorTest
